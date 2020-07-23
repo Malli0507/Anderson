@@ -279,7 +279,7 @@ get_after_lockdown_R <- function(params, t)
 
 
 
-after_lockdown_R <- get_after_lockdown_R(a=0.71, S=2.5, k=0.0077258), t=seq(0,180))
+after_lockdown_R <- get_after_lockdown_R(params=list(a=0.71, S=2.5, k=0.013), t=seq(0,180))
 after_lockdown_factor <- after_lockdown_R / parameters$R0[[1]]
 
 
@@ -360,7 +360,7 @@ q <- ggplot(df.plot.cut) + theme_classic() + theme(axis.title=element_text(size=
      theme(axis.text.x = element_text(angle = 60, vjust = 0.5, hjust=0.5), axis.title.x=element_blank(),
 	axis.text.y=element_blank(), axis.ticks.y=element_blank())
 print(q)
-ggsave(paste0(plot.path, "mean.95CI.lock.down.logistic.growth.pdf"), plot=q, dpi=300)	
+ggsave(paste0(plot.path, "mean.95CI.lock.down.logistic.growth.2.pdf"), plot=q, dpi=300)	
 
 
 
